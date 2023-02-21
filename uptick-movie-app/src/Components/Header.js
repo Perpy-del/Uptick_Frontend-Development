@@ -28,11 +28,9 @@ const SearchBar = styled.div`
   display: flex;
   align-items: center;
   border-radius: 0.3rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
   width: 45%;
-  height: 2.5rem;
   background-color: white;
-
 `;
 
 const SearchIcon = styled.img`
@@ -60,7 +58,7 @@ const Header = () => {
       </AppName>
       <SearchBar>
         <SearchIcon src={search} />
-        <SearchInput type="text" placeholder="Search Movie"/>
+        <SearchInput type="text" placeholder="Search Movie by Genre or Release Date"/>
       </SearchBar>
     </HeaderContainer>
   )
