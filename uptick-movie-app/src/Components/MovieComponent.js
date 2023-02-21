@@ -5,7 +5,7 @@ const MovieContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0.75rem;
-  width: 10.25rem;
+  width: 13rem;
   box-shadow: 0 3px 3px 0 #aaa;
   cursor: pointer;
   background-color: white;
@@ -14,7 +14,7 @@ const MovieContainer = styled.div`
 
 const CoverImage = styled.img`
   object-fit: cover;
-  height: 300px;
+  height: 360px;
 `;
 
 const MovieName = styled.span`
