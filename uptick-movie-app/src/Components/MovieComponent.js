@@ -4,21 +4,22 @@ import styled from "styled-components";
 const MovieContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0.75rem;
+  padding: 0.5rem;
   width: 13rem;
   box-shadow: 0 3px 3px 0 #aaa;
   cursor: pointer;
   background-color: white;
-  margin-top: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.4rem;
 `;
 
 const CoverImage = styled.img`
   object-fit: cover;
-  height: 360px;
+  height: 300px;
 `;
 
 const MovieName = styled.span`
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: black;
   margin: 1rem 0;
@@ -29,30 +30,29 @@ const MovieName = styled.span`
 
 const InfoColumn = styled.div`
   display: flex;
+  gap: 2rem;
   justify-content: space-between;
 `;
 
 const MovieInfo = styled.span`
-  font-size: 0.85rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 500;
   color: black;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-`;  
+  text-transform: capitalize;
+`;   
 
 const MovieComponent = (props) => {
+  const { Title, Year, imdbID, Type, Poster } = props.movie;
   return (
-    <MovieContainer>
-        <CoverImage src='https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg'/>
+    <MovieContainer onClick={() => props.onMovieSelect(imdbID)}>
+        <CoverImage src={Poster}/>
         <MovieName>
-            Guardians of the Galaxy Vol. 2
+            {Title}
         </MovieName>
         <InfoColumn>
-            <MovieInfo>05 May 2017</MovieInfo>
-            <MovieInfo>Action, Adventure, Comedy</MovieInfo>
+            <MovieInfo>Year: {Year}</MovieInfo>
+            <MovieInfo>Type: {Type}</MovieInfo>
         </InfoColumn>
-
     </MovieContainer>
   )
 }

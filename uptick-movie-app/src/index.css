@@ -1,5 +1,8 @@
 body {
   margin: 0;
+  background-image: linear-gradient( to bottom, rgb(32, 31, 31), rgba(0, 0, 0, 0.582)), url('./images/R.jpg');
+  background-position: cover;
+  background-repeat: no-repeat;
   background-color: rgb(17, 17, 17);
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
