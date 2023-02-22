@@ -24,9 +24,11 @@ const Header = styled.div`
   font-weight: 700;
 `;
 
-const AppName = styled.div`
+const AppName = styled.a`
   display: flex;
   align-items: center;
+  color: white;
+  text-decoration: none;
 `;
 
 const UptickImage = styled.img`
@@ -96,7 +98,7 @@ const App = () => {
   return (
     <Container>
       <Header>
-        <AppName>
+        <AppName href="./">
           <UptickImage src={uptick} alt="Uptick" />
           UPTICK Movies
         </AppName>
@@ -117,15 +119,17 @@ const App = () => {
         />
       )}
       <MovieListContainer>
-        {movieList?.length
-          ? movieList.map((movie, index) => (
-              <MovieComponent
-                key={index}
-                movie={movie}
-                onMovieSelect={onMovieSelect}
-              />
-            ))
-          : <Placeholder src={uptick} />}
+        {movieList?.length ? (
+          movieList.map((movie, index) => (
+            <MovieComponent
+              key={index}
+              movie={movie}
+              onMovieSelect={onMovieSelect}
+            />
+          ))
+        ) : (
+          <Placeholder src={uptick} />
+        )}
       </MovieListContainer>
     </Container>
   );
