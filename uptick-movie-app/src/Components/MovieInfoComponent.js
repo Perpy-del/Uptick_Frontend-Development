@@ -62,6 +62,12 @@ const Close = styled.span`
   opacity: 0.8;
 `;
 
+const Loading = styled.h3`
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+`;
+
 const MovieInfoComponent = (props) => {
   const { selectedMovie } = props;
   const [movieInfo, setMovieInfo] = useState();
@@ -113,7 +119,7 @@ const MovieInfoComponent = (props) => {
           <Close onClick={() => props.onMovieSelect()}>X</Close>
         </>
       ) : (
-        "Loading..."
+        <Loading>Loading...</Loading>
       )}
     </Container>
   );
