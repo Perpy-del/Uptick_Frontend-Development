@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Main Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple web application created using React that the user can use to search for movies and get information about different movies.
 
-## Available Scripts
+## Requirements
+-   The application should have a search bar and the ability to filter results by
+genre and release date.
+-   The application should use a popular frontend framework such as React,
+Angular etc.
+-   The application should display the results in a user-friendly format with
+details about the movie such as title, release date, genre, and a short
+overview.
+-  The application should fetch the data from a public API.
+-   Proper use of Git for version control.
+-  Deploy your app to a hosting service (e.g Netlify, Vercel etc) and provide link
 
-In the project directory, you can run:
+## Framework Used
 
-### `npm start`
+### React:
+This is a Javascript framework used to create UI components. To install, on your terminal input;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+npx create-react-app uptick-movie-app
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+It was hosted using localhost:3000
 
-### `npm test`
+## API Used:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[The Open Movie Database APIs](http://www.omdbapi.com/)
 
-### `npm run build`
+Generate API key from : [http://www.omdbapi.com/apikey.aspx](http://www.omdbapi.com/apikey.aspx)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### API Info:
+- Method: `GET`
+- Search URL: `https://www.omdbapi.com/?s={MOVIE_NAME}&apikey={API_KEY}`
+- Movie Details URL: `https://www.omdbapi.com/?s={MOVIE_NAME}&apikey={API_KEY}`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Icons & Font:
+- Icons: `Iconfy`
+- Font Link: `<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">`
+- Font family: `font-family: 'Montserrat', sans-serif;`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Libraries used:
+- `styled-components`
+- `axios`
 
-### `npm run eject`
+### Debugging Tool:
+- `React Developer Tool`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Demo:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Deployed using Vercel:
+[Uptick Movies](https://uptick-frontend-development.vercel.app/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Screenshot of the app:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Uptick](./src/images/sc_uptick.png)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### *Thank you for reading*

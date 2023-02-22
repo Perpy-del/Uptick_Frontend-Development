@@ -54,3 +54,16 @@ expected?
 -   **Code quality**: Is the code written in a clear and maintainable way?
 -   **Best practices**: Are best practices for frontend development being followed?
 -   **Version control**: Is Git being used correctly and effectively?
+
+### Demo:
+
+Deployed using Vercel:
+[Uptick Movies](https://uptick-frontend-development.vercel.app/)
+
+#### Screenshot of the app:
+
+![Uptick](./src/images/sc_uptick.png)
+
+More of the project found in the [uptick-movie-app](./uptick-movie-app) folder.
+
+### *Thank you for reading*
