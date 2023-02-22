@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
 const MovieContainer = styled.div`
@@ -11,6 +11,11 @@ const MovieContainer = styled.div`
   background-color: white;
   margin: 1rem 0;
   border-radius: 0.4rem;
+  transition: all 0.5s;
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+  }
 `;
 
 const CoverImage = styled.img`
@@ -39,22 +44,20 @@ const MovieInfo = styled.span`
   font-weight: 500;
   color: black;
   text-transform: capitalize;
-`;   
+`;
 
 const MovieComponent = (props) => {
   const { Title, Year, imdbID, Type, Poster } = props.movie;
   return (
     <MovieContainer onClick={() => props.onMovieSelect(imdbID)}>
-        <CoverImage src={Poster}/>
-        <MovieName>
-            {Title}
-        </MovieName>
-        <InfoColumn>
-            <MovieInfo>Year: {Year}</MovieInfo>
-            <MovieInfo>Type: {Type}</MovieInfo>
-        </InfoColumn>
+      <CoverImage src={Poster} />
+      <MovieName>{Title}</MovieName>
+      <InfoColumn>
+        <MovieInfo>Year: {Year}</MovieInfo>
+        <MovieInfo>Type: {Type}</MovieInfo>
+      </InfoColumn>
     </MovieContainer>
-  )
-}
+  );
+};
 
-export default MovieComponent
+export default MovieComponent;
