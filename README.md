@@ -62,7 +62,7 @@ Deployed using Vercel:
 
 #### Screenshot of the app:
 
-![Uptick](./src/images/sc_uptick.png)
+![Uptick](./uptick-movie-app/src/images/sc_uptick.png)
 
 More of the project found in the [uptick-movie-app](./uptick-movie-app) folder.
 
